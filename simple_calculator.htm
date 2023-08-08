@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic calculator</title>
+</head>
+<body>
+    <b> <font align="center">This is a simple calculator made with the help of javascript</font></b>
+    <br>
+    <hr>
+    <table>
+        <form name="Calc">
+        <tr>
+            <td>First Number:</td>
+            <td><input type="text" value = "" name="First"/></td>
+        </tr>
+        <tr>
+            <td>Second Number:</td>
+            <td><input type="text" value = "" name="Second"/></td>
+        </tr>
+        
+        <tr>
+            <td><input type="button" value="ADD" onclick="add()"/></td>
+            <td><input type="button" value="SUB" onclick="sub()"/></td>
+        </tr>
+
+        <tr>
+            <td><input type="button" value="MUL" onclick="mul()"/></td>
+            <td><input type="button" value="DIV" onclick="divisible()"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="REM" onclick="rem()"/></td>
+        </tr>
+    
+        </form>
+    </table>
+
+    <p id = "result"></p>
+    
+    
+
+    <script>
+        function add() {
+            let a = parseInt(document.Calc.First.value);
+            let b = parseInt(document.Calc.Second.value);
+            let ad = a+b;
+            let result = "<b>ANS = "+ad+"</b>";
+            //document.write(result);
+            document.getElementById("result").innerHTML = result;
+        }
+
+        function sub() {
+            let a = parseInt(document.Calc.First.value);
+            let b = parseInt(document.Calc.Second.value);
+            let ad = a-b;
+            let result = "<b>ANS = "+ad+"</b>";
+            document.getElementById("result").innerHTML = result; 
+        }
+
+        function mul() {
+            let a = parseInt(document.Calc.First.value);
+            let b = parseInt(document.Calc.Second.value);
+            let ad = a*b;
+            let result = "<b>ANS = "+ad+"</b>";
+            document.getElementById("result").innerHTML = result; 
+        }
+
+        function divisible() {
+            let a = parseInt(document.Calc.First.value);
+            let b = parseInt(document.Calc.Second.value);
+            let ad = a/b;
+            let result = "<b>ANS = "+ad+"</b>";
+            document.getElementById("result").innerHTML = result; 
+        }
+
+        function rem() {
+            let a = parseInt(document.Calc.First.value);
+            let b = parseInt(document.Calc.Second.value);
+            let ad = a%b;
+            let result = "<b>ANS = "+ad+"</b>";
+            document.getElementById("result").innerHTML = result; 
+        }
+        
+
+    </script>
+
+</body>
+</html>
