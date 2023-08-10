@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalClock</title>
+    <style>
+        #text{color :black; font-style: italic;font-family: Arial, Helvetica, sans-serif;text-align: center;}
+        body{background: radial-gradient(darkblue,grey);padding-top: 60px;padding-bottom: 40px;}
+
+        
+        td{color:black;font-family: sans-serif;}
+    </style>
+</head>
+<body>
+    <h1 id="text">DigitalClock with Javascript</h1>
+    <table border="3" align="center" bgcolor="grey">
+        <tr>
+            <td><h1>Date  </h1></td>
+            <td><h1 id="date"></h1></td>
+        </tr>
+        <tr>
+            <td><h2>Time  </h2></td>
+            <td><h2 id="time"></h2></td>
+        </tr>
+    </table>
+
+
+
+
+    
+    
+    
+    
+
+    <script>
+        var dates = new Date();
+        document.getElementById('date').innerHTML = dates.getDate()+"/"+(dates.getMonth()+1)+"/"+dates.getFullYear()
+        setInterval(function(){
+            var date = new Date();
+            document.getElementById('time').innerHTML = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()
+        },100
+        )
+
+
+
+    </script>
+</body>
+</html>
